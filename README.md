@@ -23,7 +23,7 @@ $10 in credit.
 creates a new account, he has $0 in credit.
 ```
 
-You can check live demo here: `https://nestjs-referral-staging.herokuapp.com/api`
+You can check live demo here: (https://nestjs-referral-staging.herokuapp.com/api)
 
 
 ## Installation
