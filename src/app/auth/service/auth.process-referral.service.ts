@@ -37,8 +37,9 @@ export default class AuthProcessReferralService
   protected getReferralIdFromToken(token: string): number {
     const referrerId = Buffer.from(token, 'base64').toString()
 
-    return parseInt(referrerId)
+    return parseInt(referrerId) || null
   }
+
   protected async processReferrer(user: User) {
     this.increaseReferralCount(user)
     this.addReferralAmountPerStackCount(user)

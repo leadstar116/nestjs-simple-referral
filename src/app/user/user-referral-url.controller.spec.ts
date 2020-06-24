@@ -5,19 +5,19 @@ import { User } from './user.entity'
 import { Request } from '../../common/request'
 import { createRequest } from 'node-mocks-http'
 import { factory } from './user.factory'
-import { UserReferralLinkController } from './user-referral-link.controller';
+import { UserReferralUrlController } from './user-referral-url.controller';
 
 require('dotenv').config()
 
-describe('UserReferralLinkController', () => {
-  let controller: UserReferralLinkController
+describe('UserReferralUrlController', () => {
+  let controller: UserReferralUrlController
   let userService: UserService
   let userServiceGetReferralTokenSpy
   const mockedReferralToken = 'xxxxx'
 
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule({
-      controllers: [UserReferralLinkController],
+      controllers: [UserReferralUrlController],
       providers: [
         UserService,
         UserRepository
@@ -25,7 +25,7 @@ describe('UserReferralLinkController', () => {
     }).compile()
 
     userService = moduleRef.get<UserService>(UserService)
-    controller = moduleRef.get<UserReferralLinkController>(UserReferralLinkController)
+    controller = moduleRef.get<UserReferralUrlController>(UserReferralUrlController)
 
     userServiceGetReferralTokenSpy = jest
       .spyOn(userService, "getReferralToken")
@@ -40,9 +40,9 @@ describe('UserReferralLinkController', () => {
         const req: Request = createRequest()
         req.user = user
 
-        const result = await controller.referralLink(req)
+        const result = await controller.referralUrl(req)
 
-        expect(result).toEqual(mockedReferralToken)
+        expect(result.referralUrl.includes(mockedReferralToken)).toEqual(true)
         expect(userServiceGetReferralTokenSpy).toBeCalledTimes(1)
       })
     })

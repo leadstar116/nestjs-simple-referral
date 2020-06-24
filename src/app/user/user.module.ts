@@ -4,13 +4,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserController } from './user.controller';
 import { UserRepository } from './user.repository';
 import { UserService } from './user.service';
-import { UserReferralLinkController } from './user-referral-link.controller';
+import { UserReferralUrlController } from './user-referral-url.controller';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([UserRepository]),
   ],
-  controllers: [UserController, UserReferralLinkController],
+  controllers: [UserController, UserReferralUrlController],
   providers: [UserService],
   exports: [UserService]
 })
