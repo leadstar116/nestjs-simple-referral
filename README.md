@@ -23,8 +23,9 @@ $10 in credit.
 creates a new account, he has $0 in credit.
 ```
 
-You can check live demo here: (https://nestjs-referral-staging.herokuapp.com/api)
+You can check live swagger ui here: (https://nestjs-referral-staging.herokuapp.com/api)
 
+<img src="https://p47.f4.n0.cdn.getcloudapp.com/items/5zuXNZKN/Image%202020-06-25%20at%206.10.03%20AM.png">
 
 ## Installation
 
