@@ -1,7 +1,7 @@
 NestJS Jumpstart
 
 ## Description
-The Problem
+The Problem:
 The company wants to implement a customer referral program, in order to acquire new paying customers. Here are the product requirements that we are given:
 ```● An existing user can create a referral to invite people, via a shareable sign-up link that contains a unique code
 ● When 5 people sign up using that referral, the inviter gets $10.
