@@ -37,7 +37,7 @@
     "@types/bcrypt": "^3.0.0",
     "bcrypt": "^4.0.1",
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "js-yaml": "^3.14.0",
     "nest-router": "^1.0.9",
     "node-mocks-http": "^1.8.1",
